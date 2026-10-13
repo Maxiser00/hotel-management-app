@@ -4,6 +4,14 @@ A mobile application developed with **C# and .NET MAUI 8**, designed to help hot
 
 Originally developed as a collaborative academic project during the **BTS SIO SLAM** program, this application provides a centralized interface for hotel management.
 
+## Platform Compatibility
+
+HegreHotel is built with .NET MAUI and is configured to target Android, iOS, Mac Catalyst, and Windows.
+
+**Tested platform:** Android (Android emulator, .NET 8).
+
+Compatibility with iOS, Mac Catalyst, and Windows has not yet been verified.
+
 ## Features
 
 ### Guest Management
