@@ -1,0 +1,80 @@
+# Fichiers de logs
+*.log
+*.tlog
+
+# Fichiers de build
+bin/
+obj/
+build/
+*.ilk
+*.pdb
+*.ipdb
+*.iobj
+*.genruntimeconfigcache
+*.manifest
+*.userprefs
+
+# Dossiers de cache
+.vscode/
+.idea/
+.env/
+.env.*
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+*.suo
+*.user
+*.sqlite-journal
+
+# Fichiers générés pour les plateformes cibles
+*.apk
+*.aab
+*.app
+*.ipa
+*.dll
+*.exe
+*.dSYM/
+*.dylib
+*.so
+
+# Paquets NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+
+# Fichiers de config spécifiques à l'utilisateur
+*.sln.DotSettings
+*.sln.DotSettings.user
+
+# Fichiers temporaires et de sauvegarde
+*.tmp
+*.swp
+*.bak
+*.backup
+*.orig
+*.rej
+*~ 
+
+# Fichiers locaux MAUI/VS
+.vs/
+logs/
+TestResults/
+
+# Environment configuration
+.env
+.env.local
+
+# Android signing and certificates
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.key
+
+# Local databases
+*.db
+*.db3
+*.sqlite
+*.sqlite3

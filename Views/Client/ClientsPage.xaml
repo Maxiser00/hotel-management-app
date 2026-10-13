@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HegreHotel.Views.Client.ClientsPage"
+             Title="Gestion des Clients"
+             Appearing="ClientsPage_OnAppearing">
+
+    <StackLayout Padding="15" Spacing="10">
+        <Button Text="Ajouter Client"
+                Clicked="OnAjouterClientClicked"
+                HorizontalOptions="Center"
+                BackgroundColor="#007AFF"
+                TextColor="White"
+                CornerRadius="10"
+                Padding="10"
+                FontAttributes="Bold"
+                WidthRequest="200" />
+
+        <CollectionView x:Name="ClientsCollectionView"
+                        SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="10"
+                           CornerRadius="10"
+                           BackgroundColor="White"
+                           BorderColor="#E5E7EB"
+                           Margin="0,5"
+                           BindingContext="{Binding .}">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnClientTapped" />
+                        </Frame.GestureRecognizers>
+
+                        <StackLayout Orientation="Horizontal" Spacing="15">
+                            <Image Source="user_icon.png"
+                                   WidthRequest="40"
+                                   HeightRequest="40" />
+
+                            <VerticalStackLayout>
+                                <Label Text="{Binding Nom}"
+                                       FontAttributes="Bold"
+                                       FontSize="16" />
+                                <Label Text="{Binding Prenom}"
+                                       FontSize="14"
+                                       TextColor="Gray" />
+                            </VerticalStackLayout>
+
+                            <StackLayout Orientation="Horizontal"
+                                         HorizontalOptions="EndAndExpand"
+                                         Spacing="5">
+                                <ImageButton Source="edit_icon.png"
+                                             Clicked="OnModifierClientClicked"
+                                             CommandParameter="{Binding .}"
+                                             HeightRequest="30"
+                                             WidthRequest="30"
+                                             BackgroundColor="Transparent" />
+                                <ImageButton Source="delete_icon.png"
+                                             Clicked="OnSupprimerClientClicked"
+                                             CommandParameter="{Binding .}"
+                                             HeightRequest="30"
+                                             WidthRequest="30"
+                                             BackgroundColor="Transparent" />
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

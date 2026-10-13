@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HegreHotel.Views.Reservation.AjouterReservationPage"
+             Title="Ajouter une Réservation">
+    <StackLayout Padding="10">
+        <Label Text="Sélectionnez la période" FontAttributes="Bold"/>
+        <DatePicker x:Name="DatePickerDebut" />
+        <DatePicker x:Name="DatePickerFin" />
+        
+        <Button Text="Vérifier Disponibilité" 
+                Clicked="OnVerifierDisponibiliteClicked" 
+                Margin="10,0"/>
+
+        <StackLayout x:Name="SelectionSection" IsVisible="False">
+            
+            <Label Text="Sélectionnez un client" FontAttributes="Bold"/>
+            <Picker x:Name="PickerClient" Title="Sélectionner un client"/>
+
+            <Label Text="Sélectionnez une chambre disponible" FontAttributes="Bold"/>
+            <Picker x:Name="PickerChambre" Title="Sélectionner une chambre"/>
+
+            <Entry x:Name="EntryNbInvite" Placeholder="Nombre de personnes" Keyboard="Numeric"/>
+            <Entry x:Name="EntryDemandeSpecifique" Placeholder="Demandes spécifiques"/>
+
+            <Button Text="Enregistrer" Clicked="OnEnregistrerClicked" Margin="0,20"/>
+        </StackLayout>
+
+    </StackLayout>
+</ContentPage>
+

@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HegreHotel.Views.GestionDepart.GestionDepartPage"
+             Title="Gestion des départs et arrivées"
+             Appearing="GestionPage_OnAppearing">
+    
+    <ContentPage.Content>
+        
+        <StackLayout>
+            <StackLayout>
+                <StackLayout Padding="20" Orientation="Vertical">
+                    <StackLayout Padding="20" Orientation="Horizontal">
+                    <BoxView HeightRequest="5" Color="MediumPurple"/>
+                    <Label Text="Arrivée(s)"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"/>
+                    </StackLayout>
+
+                <ListView x:Name="GestionArriveListView" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Vertical" Padding="5" HorizontalOptions="FillAndExpand">
+                                    <!-- Première ligne : ID chambre et Nombre de personnes -->
+                                    <StackLayout Orientation="Horizontal" Padding="5" HorizontalOptions="FillAndExpand">
+                                        <Label Text="ID chambre :"
+                                               VerticalOptions="Center"
+                                               WidthRequest="120"/>
+                                        <Label Text="{Binding ChambreId}"
+                                               VerticalOptions="Center"
+                                               WidthRequest="50"/>
+
+                                        <Label Text="Nombres de personnes :"
+                                               VerticalOptions="Center"
+                                               WidthRequest="160"/>
+                                        <Label Text="{Binding NbPersonnes}"
+                                               VerticalOptions="Center"
+                                               WidthRequest="50"/>
+                                    </StackLayout>
+
+                                    <!-- Deuxième ligne : Date d'arrivée -->
+                                    <StackLayout Orientation="Horizontal" Padding="5" HorizontalOptions="FillAndExpand">
+                                        <Label Text="Date d'arrivée :"
+                                               VerticalOptions="Center"
+                                               WidthRequest="150"/>
+                                        <Label Text="{Binding DateDebut, StringFormat='{0:dd/MM/yyyy}'}"
+                                               VerticalOptions="Center"
+                                               WidthRequest="100"/>
+                                    </StackLayout>
+                        
+                                    <!-- Troisième ligne : Date de départ -->
+                                    <StackLayout Orientation="Horizontal" Padding="5" HorizontalOptions="FillAndExpand">
+                                        <Label Text="Date de départ :"
+                                               VerticalOptions="Center"
+                                               WidthRequest="150"/>
+                                        <Label Text="Aujourd'hui" 
+                                               VerticalOptions="Center" 
+                                               WidthRequest="100"/>
+                                    </StackLayout>
+                                    
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+
+            
+        <StackLayout Padding="20" Orientation="Vertical">
+        <StackLayout Padding="20" Orientation="Horizontal">
+            <BoxView HeightRequest="5" Color="MediumPurple"/>
+            <Label Text="Départ(s)"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+        </StackLayout>
+
+        <ListView x:Name="GestionDepartListView" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <!-- StackLayout principal avec orientation verticale -->
+                        <StackLayout Orientation="Vertical" Padding="5" HorizontalOptions="FillAndExpand">
+                            <!-- Première ligne : ID chambre et Nombre de personnes -->
+                            <StackLayout Orientation="Horizontal" Padding="5" HorizontalOptions="FillAndExpand">
+                                <Label Text="ID chambre :"
+                                       VerticalOptions="Center"
+                                       WidthRequest="120"/>
+                                <Label Text="{Binding ChambreId}"
+                                       VerticalOptions="Center"
+                                       WidthRequest="50"/>
+
+                                <Label Text="Nombres de personnes :"
+                                       VerticalOptions="Center"
+                                       WidthRequest="160"/>
+                                <Label Text="{Binding NbPersonnes}"
+                                       VerticalOptions="Center"
+                                       WidthRequest="50"/>
+                            </StackLayout>
+
+                            <!-- Deuxième ligne : Date d'arrivée -->
+                            <StackLayout Orientation="Horizontal" Padding="5" HorizontalOptions="FillAndExpand">
+                                <Label Text="Date d'arrivée :"
+                                       VerticalOptions="Center"
+                                       WidthRequest="150"/>
+                                <Label Text="{Binding DateDebut, StringFormat='{0:dd/MM/yyyy}'}"
+                                       VerticalOptions="Center"
+                                       WidthRequest="100"/>
+                            </StackLayout>
+
+                            <!-- Troisième ligne : Date de départ -->
+                            <StackLayout Orientation="Horizontal" Padding="5" HorizontalOptions="FillAndExpand">
+                                <Label Text="Date de départ :"
+                                       VerticalOptions="Center"
+                                       WidthRequest="150"/>
+                                <Label Text="Aujourd'hui" 
+                                       VerticalOptions="Center" 
+                                       WidthRequest="100"/>
+                            </StackLayout>
+
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

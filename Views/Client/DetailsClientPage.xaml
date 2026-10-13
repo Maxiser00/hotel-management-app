@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HegreHotel.Views.Client.DetailsClientPage"
+             Title="Détails du Client">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            
+            <!-- Nom et prénom -->
+            <Frame Padding="10" CornerRadius="10" BackgroundColor="#F3F4F6">
+                <HorizontalStackLayout Spacing="10">
+                    <Label Text="{Binding Nom}" FontAttributes="Bold" FontSize="22"/>
+                    <Label Text="{Binding Prenom}" FontSize="22"/>
+                </HorizontalStackLayout>
+            </Frame>
+
+            <!-- Coordonnées -->
+            <Frame Padding="10" CornerRadius="10" BackgroundColor="#F9FAFB">
+                <VerticalStackLayout Spacing="5">
+                    <HorizontalStackLayout Spacing="10">
+                        <Image Source="email_icon.png" WidthRequest="20" HeightRequest="20"/>
+                        <Label Text="{Binding Email}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="10">
+                        <Image Source="phone_icon.png" WidthRequest="20" HeightRequest="20"/>
+                        <Label Text="{Binding Telephone}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Historique des réservations -->
+            <Label Text="Historique des réservations :" FontAttributes="Bold" FontSize="18" Margin="0,10,0,5"/>
+            <CollectionView x:Name="ListeReservations">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="10" CornerRadius="10" BackgroundColor="White" BorderColor="#E5E7EB" Margin="0,5">
+                            <VerticalStackLayout Spacing="5">
+                                <Label Text="{Binding ChambreNom}" FontAttributes="Bold" FontSize="16"/>
+                                <HorizontalStackLayout Spacing="10">
+                                    <Label Text="Début :" FontAttributes="Bold"/>
+                                    <Label Text="{Binding DateDebut, StringFormat='{0:dd/MM/yyyy}'}"/>
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout Spacing="10">
+                                    <Label Text="Fin :" FontAttributes="Bold"/>
+                                    <Label Text="{Binding DateFin, StringFormat='{0:dd/MM/yyyy}'}"/>
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout Spacing="10">
+                                    <Label Text="Invités :" FontAttributes="Bold"/>
+                                    <Label Text="{Binding NbInvite}"/>
+                                </HorizontalStackLayout>
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

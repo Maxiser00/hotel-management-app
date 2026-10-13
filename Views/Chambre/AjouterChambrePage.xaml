@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HegreHotel.Views.Chambre.AjouterChambrePage"
+             Title="Ajouter une Chambre">
+    <StackLayout Padding="10">
+        <Entry x:Name="EntryNom" Placeholder="Nom de la chambre"/>
+        <Entry x:Name="EntryDescription" Placeholder="Description"/>
+        <Entry x:Name="EntryTarif" Placeholder="Tarif" Keyboard="Numeric"/>
+        <Entry x:Name="EntryNbPersonne" Placeholder="Nombre de personnes" Keyboard="Numeric"/>
+        <Button Text="Enregistrer" Clicked="OnEnregistrerClicked" Margin="0,20"/>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HegreHotel.Views.Chambre.ModifierChambrePage"
+             Title="Modifier la Chambre">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <!-- Champ Nom -->
+            <Frame Padding="10" CornerRadius="10" BackgroundColor="White" BorderColor="#E5E7EB">
+                <Entry x:Name="EntryNom" Placeholder="Nom de la chambre"/>
+            </Frame>
+
+            <!-- Champ Description -->
+            <Frame Padding="10" CornerRadius="10" BackgroundColor="White" BorderColor="#E5E7EB">
+                <Editor x:Name="EntryDescription" Placeholder="Description" AutoSize="TextChanges"/>
+            </Frame>
+
+            <!-- Champ Tarif -->
+            <Frame Padding="10" CornerRadius="10" BackgroundColor="White" BorderColor="#E5E7EB">
+                <Entry x:Name="EntryTarif" Placeholder="Tarif (€)" Keyboard="Numeric"/>
+            </Frame>
+
+            <!-- Champ Nombre de personnes -->
+            <Frame Padding="10" CornerRadius="10" BackgroundColor="White" BorderColor="#E5E7EB">
+                <Entry x:Name="EntryNbPersonne" Placeholder="Nombre de personnes" Keyboard="Numeric"/>
+            </Frame>
+
+            <Label Text="Modifier le Statut" Margin="10,0,0,0"/>
+            <Picker x:Name="PickerStatut" Title=""/>
+            
+            <!-- Bouton Enregistrer -->
+            <Button Text="Enregistrer les modifications" 
+                    Clicked="OnEnregistrerClicked" 
+                    BackgroundColor="#007AFF"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Padding="12"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"/>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HegreHotel.Views.Chambre.ChambresPage"
+             Title="Gestion des Chambres"
+             Appearing="ChambresPage_OnAppearing">
+    <StackLayout Padding="10">
+        <Picker x:Name="PickerFiltreStatus" Title="Filtrer par statut" SelectedIndexChanged="OnFiltreChanged"/>
+        
+        <Button Text="Ajouter Chambre" 
+                Clicked="OnAjouterChambreClicked" 
+                HorizontalOptions="Center" 
+                Margin="0,10"/>
+        
+        <ListView x:Name="ChambresListView" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="5" Spacing="10">
+                            <!-- Nom de la chambre -->
+                            <Label Text="{Binding Nom}" 
+                                   FontAttributes="Bold" 
+                                   VerticalOptions="Center"
+                                   WidthRequest="120"/> <!-- Ajusté pour laisser de la place -->
+
+                            <!-- Statut de la chambre -->
+                            <Label Text="{Binding Status.Libelle}" 
+                                   FontAttributes="Italic"
+                                   VerticalOptions="Center"
+                                   WidthRequest="100"/>
+                            
+                            <!-- Icônes Modifier / Supprimer -->
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Spacing="5">
+                                <ImageButton Source="edit_icon.png" 
+                                             Clicked="OnModifierChambreClicked" 
+                                             CommandParameter="{Binding .}"
+                                             HeightRequest="30"
+                                             WidthRequest="30"
+                                             BackgroundColor="Transparent"/>
+                                <ImageButton Source="delete_icon.png" 
+                                             Clicked="OnSupprimerChambreClicked" 
+                                             CommandParameter="{Binding .}"
+                                             HeightRequest="30"
+                                             WidthRequest="30"
+                                             BackgroundColor="Transparent"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

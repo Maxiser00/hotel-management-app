@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HegreHotel", "HegreHotel.csproj", "{FEF59F7E-F629-4CA1-A4B9-7AF1A558683C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEF59F7E-F629-4CA1-A4B9-7AF1A558683C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEF59F7E-F629-4CA1-A4B9-7AF1A558683C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEF59F7E-F629-4CA1-A4B9-7AF1A558683C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEF59F7E-F629-4CA1-A4B9-7AF1A558683C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
