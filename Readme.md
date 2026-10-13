@@ -31,6 +31,18 @@ Originally developed as a collaborative academic project during the **BTS SIO SL
 - Filter room availability by date range.
 - Access reservation information.
 
+## Screenshots
+
+Explore the main features of HegreHotel through its Android interface.
+
+| Home | Customers | Rooms |
+|:---:|:---:|:---:|
+| <img src="docs/screenshots/home.png" width="230" alt="Home screen"> | <img src="docs/screenshots/customers.png" width="230" alt="Customer management"> | <img src="docs/screenshots/rooms.png" width="230" alt="Room management"> |
+
+| Reservations | Check-in & Check-out |
+|:---:|:---:|
+| <img src="docs/screenshots/reservations.png" width="230" alt="Reservation management"> | <img src="docs/screenshots/check-in-out.png" width="230" alt="Check-in and check-out management"> |
+
 ## Tech Stack
 
 | Category                | Technologies   |
